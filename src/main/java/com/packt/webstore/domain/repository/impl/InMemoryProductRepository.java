@@ -31,7 +31,7 @@ public class InMemoryProductRepository implements ProductRepository{
 	    laptop_dell.setUnitsInStock(1000);
 
 	    Product tablet_Nexus = new Product("P1236","Nexus 7", new BigDecimal(300));
-	    tablet_Nexus.setDescription("Google Nexus 7 jest najl�ejszym 7-calowym tabletem z 4-rdzeniowym procesorem Qualcomm Snapdragon� S4 Pro");
+	    tablet_Nexus.setDescription("Google Nexus 7 jest najlżejszym 7-calowym tabletem z 4-rdzeniowym procesorem Qualcomm Snapdragon S4 Pro");
 	    tablet_Nexus.setCategory("tablet");
 	    tablet_Nexus.setManufacturer("Google");
 	    tablet_Nexus.setUnitsInStock(1000);
@@ -101,4 +101,8 @@ public class InMemoryProductRepository implements ProductRepository{
 		
 		return productsByCategory;
 	}
+
+    public void addProduct(Product product) {
+        listOfProducts.add(product);
+    }
 }
